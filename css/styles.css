@@ -1,0 +1,198 @@
+:root {
+    --peach : #ffdab9;
+    --dark : #2f4f4f;
+    --cyan : #e0ffff;
+    --brown: #3e2723;
+    --green : #25d366;
+}
+* {
+    box-sizing: border-box;
+}
+html,body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#nav-container {
+    background-color: var(--cyan);
+    position: sticky;
+    top: 0px ;
+}
+.navf {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+}
+.navf label,#humberger {
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin:0;
+}
+nav ul li a {
+    display: block;
+    color: var(--dark);
+    padding: 0 16px;
+    text-decoration:none ;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+nav ul li a:hover {
+    background-color: var(--peach);
+    transition: all 0.3;
+}
+.navb  h2 {
+    margin: 14px 0 0 10px;
+    color: var(--dark);
+}
+#hero-box {
+    background-image: url(../image/hero_image.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-attachment: fixed;
+}
+.text {
+    text-align: center;
+    color: var(--cyan);
+    font-size: 20px;
+}
+.button {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--green);
+    padding: 10px;
+    color: var(--cyan);
+    font-size: 16px;
+    border-radius: 10px;
+}
+.button:hover{
+    background-color: var(--dark);
+    color: var(--cyan);
+}
+main {
+    width: 80%;
+    margin: auto;
+}
+/* about */
+#about h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+#about .aboutdesk {
+    text-align: center;
+    color: var(--dark);
+}
+.aboutf {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px auto;
+}
+.aimage,.aboutt {
+    width: 50%;
+    margin: 14px;
+}
+.aimage img {
+    width: 100%;
+    object-fit: cover;
+}
+#serv h1 {
+    color: var(--dark);
+    text-align: center;
+    margin-top: 80px;
+}
+#serv .serv-desk {
+    text-align: center;
+    color: var(--dark);
+}
+#serv .servf {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+.servit{
+    width: 25%;
+    text-align: center;
+    padding: 2px 10px ;
+   
+}
+.servit .fas {
+    color: var(--peach);
+
+}
+
+
+/* tablet */
+@media screen and (max-width:768px) {
+/* Tampilkan icon Humberger */
+    #nav-container .navf label {
+        display: inline-block;
+        color: var(--dark);
+        font-style: normal;
+        font-size: 32px;
+        padding: 8px ;
+    }
+    /* menyusun ulang menu menjadi vertikal */
+    #nav-container .navf {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    nav ul li a{
+        display: block;
+        color: var(--dark);
+        background-color: var(--cyan);
+        padding: 0 30px ;
+        height: auto;
+    }
+    /* Pindahkan posisi Brand ke kanan dan perkecil */
+    .navb h2 {
+        position: absolute;
+        right: 10px;
+    }
+    /* Untuk enampilkan atau menyembunyikan menu  */
+    #nav-container nav {
+        display: none;
+    }
+    /* Menampilkan menu ketika tekx garis tiga diklik */
+    #nav-container .navf input:checked ~ nav {
+        display: flex;
+    }
+    /* about */
+    .aboutf {
+        flex-direction: column;
+    }
+    .aimage,.aboutt{
+        width: auto;
+    }
+    /* SErvices Our Fitur */
+    .servit {
+        width: 50%;
+
+    }
+}
+/* Smartphone */
+@media screen and (max-width:482px) {
+    /* SErvices */
+    .servit {
+        width: 100%;
+    }
+}
